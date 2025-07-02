@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Image from "next/image";
-type Props = {};
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="bg-[#d5d5d5] h-screen overflow-hidden relative">
       <Header black={true} />

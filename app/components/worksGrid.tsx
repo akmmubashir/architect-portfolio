@@ -5,8 +5,18 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Rock_Salt } from "next/font/google";
 
+type WorkItem = {
+  id: number;
+  projectLink: string;
+  title: string;
+  color: string;
+  bgImage: string;
+  image: string;
+  avatarImage: string;
+};
+
 type Props = {
-  dataList: any;
+  dataList: WorkItem[];
 };
 
 const rockSalt = Rock_Salt({
@@ -19,11 +29,11 @@ const WorksGrid = (props: Props) => {
   const { dataList } = props;
   return (
     <div className="grid grid-cols-12 gap-[20px] max-md:gap-[10px] h-full">
-      {dataList?.map((item: any) => (
+      {dataList?.map((item: WorkItem) => (
         <Link
-          href={item?.projectLink}
+          href={item.projectLink}
           className="col-span-3 h-[calc(100vh-360px)] relative group"
-          key={item?.id}
+          key={item.id}
         >
           <motion.h2
             initial={{ opacity: 0, x: -50 }}
@@ -33,13 +43,13 @@ const WorksGrid = (props: Props) => {
               ease: "easeOut",
             }}
             style={{
-              color: item?.color ? item?.color : "#2a2a2a",
+              color: item.color ? item.color : "#2a2a2a",
               fontFamily: rockSalt.style.fontFamily,
               fontWeight: "bold",
             }}
             className={`absolute top-[-10px] left-[50%] translate-x-[-50%] translate-y-[-10px] text-[36px] text-center uppercase`}
           >
-            {item?.title}
+            {item.title}
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -52,8 +62,8 @@ const WorksGrid = (props: Props) => {
           >
             <div className="w-[60%] h-full">
               <Image
-                src={item?.bgImage}
-                alt={item?.title + "Bg"}
+                src={item.bgImage}
+                alt={item.title + "Bg"}
                 width={1000}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -63,8 +73,8 @@ const WorksGrid = (props: Props) => {
           <div className="w-full h-full flex justify-center items-center absolute bottom-[-10px] left-[50%] translate-x-[-50%] opacity-0 group-hover:opacity-100 peer-hover:opacity-0 transition-opacity duration-300">
             <div className="w-full h-full">
               <Image
-                src={item?.image}
-                alt={item?.title + "Image"}
+                src={item.image}
+                alt={item.title + "Image"}
                 width={1000}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -82,8 +92,8 @@ const WorksGrid = (props: Props) => {
               hover:-translate-y-5 peer"
           >
             <Image
-              src={item?.avatarImage}
-              alt={item?.title + "Avatar"}
+              src={item.avatarImage}
+              alt={item.title + "Avatar"}
               width={500}
               height={500}
               className="w-full h-full object-contain"
