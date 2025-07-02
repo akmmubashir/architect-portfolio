@@ -8,7 +8,7 @@ const page = () => {
     {
       id: 1,
       title: "UAE",
-      bgImage: "/assets/works/uaeBg.png",
+      bgImage: "/assets/works/uaeBg.webp",
       avatarImage: "/assets/works/uaeGuy.png",
       image: "/assets/works/uae.png",
       projectLink: "/works/uae",
@@ -17,7 +17,7 @@ const page = () => {
     {
       id: 2,
       title: "india",
-      bgImage: "/assets/works/indiaBg.jpg",
+      bgImage: "/assets/works/indiaBg.webp",
       avatarImage: "/assets/works/indiaGuy.png",
       image: "/assets/works/india.png",
       projectLink: "/works/india",
@@ -26,7 +26,7 @@ const page = () => {
     {
       id: 3,
       title: "Education",
-      bgImage: "/assets/works/eduBg.jpg",
+      bgImage: "/assets/works/eduBg.webp",
       avatarImage: "/assets/works/eduGuy.png",
       image: "/assets/works/edu.png",
       projectLink: "/works/education",
@@ -35,7 +35,7 @@ const page = () => {
     {
       id: 4,
       title: "Art",
-      bgImage: "/assets/works/artBg.jpg",
+      bgImage: "/assets/works/artBg.webp",
       avatarImage: "/assets/works/artGuy.png",
       image: "/assets/works/art.png",
       projectLink: "/works/art",
