@@ -108,7 +108,7 @@ const InteractiveImage: React.FC = () => {
               Architecture
             </motion.h2>
           </div>
-          <div className="absolute z-30 bottom-[80px] max-md:bottom-[100px] flex max-md:flex-col gap-[30px] max-md:gap-[10px] ">
+          <div className="absolute z-30 bottom-[80px] max-md:bottom-[180px] flex max-md:flex-col gap-[30px] max-md:gap-[10px] ">
             {["cv", "works", "contact"].map((item, index) => (
               <motion.a
                 key={index}
