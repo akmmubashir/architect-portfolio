@@ -5,7 +5,7 @@ import InteractiveImage from "../components/interactiveImage";
 
 const HomePage = () => {
   return (
-    <div className="bg-white h-screen overflow-hidden relative">
+    <div className="bg-[#898989] h-screen overflow-hidden relative">
       <Header fixed={true} />
       <InteractiveImage />
       <Footer />

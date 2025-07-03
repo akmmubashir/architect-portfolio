@@ -13,6 +13,7 @@ const page = () => {
       image: "/assets/works/uae.png",
       projectLink: "/works/uae",
       color: "#5d5c5c",
+      mobileImage: "/assets/works/uaeMob.png",
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const page = () => {
       image: "/assets/works/india.png",
       projectLink: "/works/india",
       color: "#aeefc5",
+      mobileImage: "/assets/works/indiaMob.png",
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ const page = () => {
       image: "/assets/works/edu.png",
       projectLink: "/works/education",
       color: "#eb6425",
+      mobileImage: "/assets/works/eduMob.png",
     },
     {
       id: 4,
@@ -40,13 +43,14 @@ const page = () => {
       image: "/assets/works/art.png",
       projectLink: "/works/art",
       color: "#812333",
+      mobileImage: "/assets/works/artMob.png",
     },
   ];
   return (
-    <div className="bg-[#d5d5d5] h-screen overflow-hidden relative">
+    <div className="bg-white h-screen max-md:h-full md:overflow-hidden relative">
       <Header black={true} />
-      <div className="h-[calc(100vh-120px)] bg-white p-[40px_80px] flex flex-col gap-[40px] max-md:gap-[10px]">
-        <h1 className="text-[36px] font-bold uppercase text-[#2a2a2a] text-center">
+      <div className="h-[calc(100vh-120px)] max-md:h-full bg-white p-[40px_80px] max-md:p-[20px] flex flex-col gap-[40px] max-md:gap-[10px]">
+        <h1 className="text-[36px] max-md:text-[26px] font-bold uppercase text-[#2a2a2a] text-center">
           Works
         </h1>
         <WorksGrid dataList={dataList} />

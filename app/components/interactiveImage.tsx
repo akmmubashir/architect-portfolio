@@ -73,15 +73,15 @@ const InteractiveImage: React.FC = () => {
               >
                 {"portfolio".split("").map((char, index) => {
                   const colors = [
-                    "#FF6B6B", //red
-                    "#F9A825", //yellow
-                    "#F9A825", //yellow
-                    "#1E88E5", //blue
-                    "#1E88E5", //blue
-                    "#1E88E5", //blue
-                    "#FB8C00", //orange
-                    "#FB8C00", //orange
-                    "#FF6B6B", //red
+                    "#2a2a2a",
+                    "#000",
+                    "#2a2a2a",
+                    "#2a2a2a",
+                    "#2a2a2a",
+                    "#000",
+                    "#2a2a2a",
+                    "#2a2a2a",
+                    "#000",
                   ];
                   return (
                     <motion.span
@@ -103,7 +103,7 @@ const InteractiveImage: React.FC = () => {
                 duration: 4,
                 ease: "easeOut",
               }}
-              className="text-[56px] max-md:text-[26px] font-semibold text-[#2a2a2a] bg-white px-[190px] max-md:px-[30px] absolute top-[220px] max-md:top-[64px]"
+              className="text-[56px] max-md:text-[26px] font-semibold text-white bg-[#898989] px-[190px] max-md:px-[30px] absolute top-[220px] max-md:top-[64px]"
             >
               Architecture
             </motion.h2>
@@ -116,7 +116,7 @@ const InteractiveImage: React.FC = () => {
                 animate={{ x: [-100, 0] }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.1 }}
-                className="text-[26px] max-md:text-[18px] uppercase font-medium text-[#2a2a2a] hover:text-[#2a2a2a] hover:underline underline-offset-4"
+                className="text-[26px] max-md:text-[18px] uppercase font-medium text-white hover:text-[#2a2a2a] hover:underline underline-offset-4"
               >
                 {item}
               </motion.a>
@@ -156,7 +156,7 @@ const InteractiveImage: React.FC = () => {
         <div className="flex gap-4">
           <div className="w-[100px] max-md:w-[80px] h-full pt-[30px]">
             <Image
-              src="/assets/home/birdB.png"
+              src="/assets/home/birdW.png"
               alt="interactiveImage1"
               className="w-full h-full object-contain"
               width={1000}

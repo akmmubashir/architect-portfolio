@@ -13,6 +13,7 @@ type WorkItem = {
   bgImage: string;
   image: string;
   avatarImage: string;
+  mobileImage: string;
 };
 
 type Props = {
@@ -32,7 +33,7 @@ const WorksGrid = (props: Props) => {
       {dataList?.map((item: WorkItem) => (
         <Link
           href={item.projectLink}
-          className="col-span-3 h-[calc(100vh-360px)] relative group"
+          className="col-span-3 max-md:col-span-full h-[calc(100vh-360px)] max-md:h-full relative group"
           key={item.id}
         >
           <motion.h2
@@ -47,7 +48,7 @@ const WorksGrid = (props: Props) => {
               fontFamily: rockSalt.style.fontFamily,
               fontWeight: "bold",
             }}
-            className={`absolute top-[-10px] left-[50%] translate-x-[-50%] translate-y-[-10px] text-[36px] text-center uppercase`}
+            className={`absolute top-[-10px] left-[50%] translate-x-[-50%] translate-y-[-10px] text-[36px] text-center uppercase max-md:hidden`}
           >
             {item.title}
           </motion.h2>
@@ -58,7 +59,7 @@ const WorksGrid = (props: Props) => {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="w-full h-full flex justify-center items-center"
+            className="w-full h-full flex justify-center items-center max-md:hidden"
           >
             <div className="w-[60%] h-full">
               <Image
@@ -70,7 +71,7 @@ const WorksGrid = (props: Props) => {
               />
             </div>
           </motion.div>
-          <div className="w-full h-full flex justify-center items-center absolute bottom-[-10px] left-[50%] translate-x-[-50%] opacity-0 group-hover:opacity-100 peer-hover:opacity-0 transition-opacity duration-300">
+          <div className="w-full h-full flex justify-center items-center absolute bottom-[-10px] left-[50%] translate-x-[-50%] opacity-0 group-hover:opacity-100 peer-hover:opacity-0 transition-opacity duration-300 max-md:hidden">
             <div className="w-full h-full">
               <Image
                 src={item.image}
@@ -89,7 +90,7 @@ const WorksGrid = (props: Props) => {
               ease: "easeOut",
             }}
             className="w-[350px] aspect-square flex justify-center items-center absolute bottom-[-140px] left-[60%] translate-x-[-60%] transition-transform duration-300
-              hover:-translate-y-5 peer"
+              hover:-translate-y-5 max-md:hidden"
           >
             <Image
               src={item.avatarImage}
@@ -97,6 +98,23 @@ const WorksGrid = (props: Props) => {
               width={500}
               height={500}
               className="w-full h-full object-contain"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            className="md:hidden"
+          >
+            <Image
+              src={item.mobileImage}
+              alt={item.title + "MobileImage"}
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
             />
           </motion.div>
         </Link>
