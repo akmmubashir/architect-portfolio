@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +14,16 @@ const Header = (props: Props) => {
         props.fixed ? "fixed" : "sticky"
       } top-0 w-full z-50 flex justify-start items-center p-[20px_80px] max-md:p-[20px_20px] h-[60px]`}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex items-center gap-[10px]">
+        <div className="w-[36px] aspect-square">
+          <Image
+            src="/assets/common/homeIcon.png"
+            alt="logo"
+            width={100}
+            height={100}
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div>
           <Link
             href="/"
