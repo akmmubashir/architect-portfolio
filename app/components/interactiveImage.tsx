@@ -50,12 +50,12 @@ const InteractiveImage: React.FC = () => {
   return (
     <React.Fragment>
       <div
-        className="grid grid-cols-12 items-center h-screen"
+        className="grid grid-cols-12 md:items-center h-screen"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <div className="col-span-2 max-md:col-span-full pl-[80px] max-md:px-[20px]">
-          <div className="absolute top-[160px] flex flex-col items-center">
+          <div className="absolute top-[160px] max-md:top-[140px] flex flex-col items-center">
             {/* <h1 className="text-[250px] font-semibold text-[#2a2a2a]">
               portfolio
             </h1> */}
@@ -87,7 +87,7 @@ const InteractiveImage: React.FC = () => {
                     <motion.span
                       key={index}
                       variants={child}
-                      className="text-[250px] font-semibold"
+                      className="text-[250px] max-md:text-[70px] font-semibold"
                       style={{ color: colors[index % colors.length] }}
                     >
                       {char}
@@ -103,12 +103,12 @@ const InteractiveImage: React.FC = () => {
                 duration: 4,
                 ease: "easeOut",
               }}
-              className="text-[55px] font-semibold text-[#2a2a2a] bg-white px-[190px] absolute top-[220px]"
+              className="text-[56px] max-md:text-[26px] font-semibold text-[#2a2a2a] bg-white px-[190px] max-md:px-[30px] absolute top-[220px] max-md:top-[64px]"
             >
               Architecture
             </motion.h2>
           </div>
-          <div className="absolute z-30 bottom-[80px] flex gap-[30px]">
+          <div className="absolute z-30 bottom-[80px] max-md:bottom-[100px] flex max-md:flex-col gap-[30px] max-md:gap-[10px] ">
             {["cv", "works", "contact"].map((item, index) => (
               <motion.a
                 key={index}
@@ -116,7 +116,7 @@ const InteractiveImage: React.FC = () => {
                 animate={{ x: [-100, 0] }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.1 }}
-                className="text-[26px] uppercase font-medium text-[#2a2a2a] hover:text-[#2a2a2a] hover:underline underline-offset-4"
+                className="text-[26px] max-md:text-[18px] uppercase font-medium text-[#2a2a2a] hover:text-[#2a2a2a] hover:underline underline-offset-4"
               >
                 {item}
               </motion.a>
@@ -132,10 +132,10 @@ const InteractiveImage: React.FC = () => {
           }}
           className="col-span-10 max-md:col-span-full"
         >
-          <div className="w-full h-[calc(100vh-120px)] relative">
+          <div className="w-full h-[calc(100vh-120px)] max-md:h-full relative">
             <Image
               src="/assets/home/heroImage.png"
-              className="w-full h-full object-contain absolute right-[-70px]"
+              className="w-full h-full md:object-contain max-md:object-cover absolute max-md:bottom-[70px] right-[-70px] max-md:right-0"
               alt="heroImage"
               width={2000}
               height={2000}
@@ -151,10 +151,10 @@ const InteractiveImage: React.FC = () => {
           duration: 2,
           ease: "easeOut",
         }}
-        className="transition-transform duration-200 ease-out absolute right-[500px] top-[160px]"
+        className="transition-transform duration-200 ease-out absolute right-[500px] top-[160px] max-md:right-[40px] max-md:top-[300px]"
       >
         <div className="flex gap-4">
-          <div className="w-[100px] h-full pt-[30px]">
+          <div className="w-[100px] max-md:w-[80px] h-full pt-[30px]">
             <Image
               src="/assets/home/birdB.png"
               alt="interactiveImage1"
@@ -163,7 +163,7 @@ const InteractiveImage: React.FC = () => {
               height={1000}
             />
           </div>
-          <div className="w-[50px]">
+          <div className="w-[50px] max-md:w-[40px]">
             <Image
               src="/assets/home/birdB.png"
               alt="interactiveImage2"

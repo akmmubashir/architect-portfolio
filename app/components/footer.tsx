@@ -16,8 +16,8 @@ const Footer = (props: Props) => {
       <p
         className={
           props.black
-            ? " text-white text-[16px] font-medium"
-            : " text-[#2a2a2a] text-[16px] font-medium"
+            ? " text-white text-[16px] max-md:text-[14px] font-medium text-center"
+            : " text-[#2a2a2a] text-[16px] max-md:text-[14px] font-medium text-center"
         }
       >
         © {new Date().getFullYear()} by Sachithanand P U. All rights reserved.
